@@ -1,0 +1,117 @@
+\documentclass{proc}
+
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{Surprise Map Scrollytelling Timeline on Global Military Spending}
+
+\author{Luke Foley, Nicholas Heineman, Yu-Chi Liang}
+
+\maketitle
+
+\section{Introduction}
+
+Surprise maps are a novel take on standard choropleth maps that introduce Bayesian weighting. This removes bias from the map and draws the user’s attention to key “surprising” areas of the map. This concept has been proven effective, but has a greater potential in its application, and requires further exploration into its utility. An area of interest concerning surprise maps is evaluating surprise over time, adding another key component to the calculation and further portraying the impact of surprise on user comprehension. Surprise maps are also in need of integration into other forms of data display, to prove its viability in non-standalone integrations of the visualization. Surprise maps must integrate in a way that adds to the portrayal of complex data, which is why scrollytelling is an excellent example of an engaging implementation to pair Surprise map visualizations. An equally complex dataset is required to base this project on, which is why global military spending over 50 years will be used in this proof-of-concept.
+
+
+\section{One-sentence description}
+
+Our project aims to create a surprise world map visualization on the military spending of each country from 1961 to 2022 and the event that happened in the country with the most surprise in the form of scrollytelling. 
+
+
+\section{Project Type}
+
+Interactive map/website
+
+\section{Audience} 
+
+The audience for this project is the general public. We want to create an educational visualization that allows users to analyze trends in military spending. We are doing this in the form of a surprise map because there are countries that will have much greater budgets than others, so showing a standard choropleth map will not be as helpful, as the same countries will always stand out. Using a surprise map will tell us when a country's military spending patterns are unexpected, and depicting this with scrollytelling will aid the average person’s comprehension.
+
+\section{Approach}
+
+
+To begin developing our interactive tool, we must first locate datasets for both military spending and population by country, and clean these datasets to work for our needs. We must then merge these datasets into one project and perform the surprise calculations for each country. At the same time, we will create both the surprise map to display the calculated data and the scrollytelling interface to convey our information. We will then compile and interconnect our code to create a comprehensive final product that satisfies our initial goals.
+
+
+We will determine that this project is successful once we reach all of our goals. Firstly, our website must work as it is envisioned, as a harmony between the Surprise map, data calculated over time, and data displayed with a scrollytelling interface. Secondly, our maps must display accurately calculated data with strong mathematical foundations. Thirdly, our display must also create derivable meaning for the graphs, that is conveyed to the user through more than just a weighted area. Finally, the scrollytelling aspect of our website must be smooth and interactive, creating an engaging and educational use
+
+
+\section{Best-case Impact Statement}
+
+The resulting website will create an interactive experience that will educate people on unexpected trends in our military spending data, and explain why these trends are occurring
+
+\section{Major Milestones}
+
+
+\begin{itemize}
+    \item Created a graph that shows all nations’ statistics for a single year.
+    \item Created a map of an individual country over time that shows change properly over the whole dataset.
+    \item Properly integrated surprise graph mathematics into both graphs and view results
+    \item Made design choices for how to calculate surprise over time for each visualization
+    \item Created a graph or another depiction of combined data
+    \item Integrate graph with front-end scrollytelling interface
+\end{itemize}
+
+\section{Obstacles}
+
+\subsection{Major obstacles} % (if these fail, the project is over)
+
+\begin{itemize}
+    \item Understanding the principle of surprise maps
+
+    Making surprise maps involves computing the “surprise” using specific models and expectations for the event. While the concept of a surprise map is understandable, creating the formula that allows us to calculate the surprise of each country per year is still difficult
+
+    \item Combining surprise map and scrollytelling
+
+    Settling on a UI layout that is clean and easy to use, as well as displays the content intuitively and assimilates with the required map/backend calculation code flawlessly
+
+\end{itemize}
+
+
+\subsection{Minor obstacles}
+
+
+\begin{itemize}
+    \item Finding a workable dataset
+
+    Some datasets could be so large that it might be computationally expensive to parse and we need multiple datasets related to the spending of country per year and population per year 
+
+
+    \item Parsing Dataset
+
+    There are large gaps in military spending data between major and minor powers. We need a way to spread out data in a way to make it meaningful.
+
+\end{itemize}
+
+\begin{figure*}[t]
+    \centering
+      \includegraphics[width=0.9\textwidth]{img/Figure_1.png}
+      \caption{relation between military spending and population in each country in the year 2001}
+    \label{fig:figure1}
+  \end{figure*}
+
+\section{Resources Needed}
+
+We need assistance with creating surprise graphs, as we have conceptual knowledge of their purpose and how they work, but cannot competently implement them. 
+
+\section{5 Related Publications}
+
+The work of Correl and Heer \cite{correll2016surprise} introduces the type of visualization that we are creating. The authors discuss the benefits of creating a surprise map as opposed to a standard choropleth map. They also illustrate a framework for creating the surprise maps, which is important for our comprehension of how to create surprise maps off of our military spending data.
+
+“Taken By Surprise? Evaluating how Bayesian Surprise and Suppression Influences Peoples’ Takeaways in Map Visualizations” \cite{ndlovu2023taken} is a contination of the previous paper and further strengthens the argument for using Surprise maps. This paper shows that Surprise maps minimize interpretation bias while highlighting areas with significant population differences. We will build off of this paper while creating our visualizations that also include a change in time in the surprise calculation
+
+While the work of Baldi and Itti \cite{baldi2010bits} does not directly benefit us, however, the background section and detailed explanation of the calculation of surprise is beneficial. It strengthens our understanding of surprise and how Bayes’ Theorem works. 
+
+"Scrollytelling – An Analysis of Visual Storytelling in Online Journalism" \cite{seyser2018scrollytelling} highlights how important scrollytelling is in portraying content-rich visualizations, and because maps with Bayesian surprise weighted over time are very complex, this supports our decision to include scrollytelling into our visualization. This article also supports multimodality for engagement, which is what we plan to implement on our website.
+
+The work of Mittenentzwei et al. \cite{mittenentzwei2023investigating} leads us to believe that scrollytelling is a viable way of informing a general audience. The comments from the participants about the scrollytelling version provide insight into our design. We should take scroll speed into account and provide a visual explanation that indicates the page is to be scrolled upon to revisit prior content and view new information.
+
+
+\section{Define Success}
+
+We will succeed when we have created a surprise world map given the year and have a scrollytelling window that explains the major event that happened in the most surprising country.
+
+\bibliographystyle{abbrv}
+\bibliography{prospectus}
+\end{document}
